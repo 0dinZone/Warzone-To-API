@@ -81,7 +81,9 @@ class API {
 
 	public function stopAttack($host){
 		$postdata = [
-			'host' => $host
+			'host' => $host,
+			'time' => $time,
+            'method' => $method,
 		];
 		return $this->send($postdata, "stop");
 	}
@@ -93,7 +95,7 @@ class API {
  	*/
 
 	private function send(array $parameters = [], $action){
-		$api_url = "https://warzone.to/v1/" . $action;
+		$api_url = "https://warzone.to/v1/" . $action . ".php";
 		$parameters['user'] = $this->userID;
 		$parameters['api_key'] = $this->apiKey;
 		$parameters = http_build_query($parameters, '', '&');
