@@ -37,7 +37,7 @@ class API {
 	}
 
 	/**
-    * @param string $host
+	* @param string $host
 	* @param int $port
 	* @param int $time
 	* @param string $method
@@ -83,7 +83,7 @@ class API {
 		$postdata = [
 			'host' => $host,
 			'time' => $time,
-            'method' => $method,
+			'method' => $method,
 		];
 		return $this->send($postdata, "stop");
 	}
@@ -113,7 +113,7 @@ class API {
 			case false:
 				return curl_error($this->curl_handle);
 			default:
-                return $response;
+				return $response;
 				$response = json_decode($response, true);
 				return $response;
 		}
