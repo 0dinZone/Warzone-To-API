@@ -11,7 +11,7 @@ Available here : https://warzone.to/methods
 ## Authentication
 ```php
 require 'API.php';
-// UserID and API Key generated from API Manager website.
+// UserID and API Key generated from API Manager on website.
 $userID = "12";
 $apiKey = "ABCD-123";
 $api = new API($userID, $apiKey);
