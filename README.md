@@ -21,9 +21,9 @@ $api = new API($userID, $apiKey);
 ```php
 
 $host = "1.1.1.1";
-$port = "80";
+$port = 80;
 $time = 15;
-$method = "CLDAP";
+$method ="1;
 
 /* Parameters : IPv4 , Port , Time , Method */
 $response = $api->startL4($host, $port, $time, $method);
@@ -32,8 +32,8 @@ $response = $api->startL4($host, $port, $time, $method);
 ```php
 
 $host = "https://example.com/";
-$time = "15";
-$method = "JSDOM";
+$time = 15;
+$method = 5;
 
 /* Parameters : URL , Time , Method */
 $response = $api->startL7($host, $time, $method);
