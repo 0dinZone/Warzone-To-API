@@ -46,5 +46,9 @@ $response = $api->stopAttack("1.1.1.1");
 
 ## API Response
 ```php
-echo $response; // Get API response.
+/* Echo Response Status */
+echo $response->status; // Get API response.
+
+/* Echo Message */
+echo $response->message; // Get Message.
 ```
