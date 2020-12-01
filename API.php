@@ -115,7 +115,7 @@ class API {
 			default:
                 return $response;
                 $response = json_decode($response, true);
-				return $response["message"];
+				return $response;
 		}
 	}
 }
