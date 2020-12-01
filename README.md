@@ -23,7 +23,7 @@ $api = new API($userID, $apiKey);
 $host = "1.1.1.1";
 $port = 80;
 $time = 15;
-$method ="1;
+$method = 1;
 
 /* Parameters : IPv4 , Port , Time , Method */
 $response = $api->startL4($host, $port, $time, $method);
