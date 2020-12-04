@@ -2,7 +2,7 @@
 /*
  *  WarZone.to PHP API cURL Example.
  *  
- *  @author  Michone
+ *  @author  0din
  *  @link    https://warzone.to/
  *
 */
